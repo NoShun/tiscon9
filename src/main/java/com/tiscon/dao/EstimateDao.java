@@ -37,8 +37,8 @@ public class EstimateDao {
      * @return 登録件数
      */
     public int insertCustomer(Customer customer) {
-        String sql = "INSERT INTO CUSTOMER(OLD_PREFECTURE_ID, NEW_PREFECTURE_ID, CUSTOMER_NAME, TEL, EMAIL, MOVING_MONTH, OLD_ADDRESS, NEW_ADDRESS)"
-                + " VALUES(:oldPrefectureId, :newPrefectureId, :customerName, :tel, :email, :movingmonth, :oldAddress, :newAddress)";
+        String sql = "INSERT INTO CUSTOMER(OLD_PREFECTURE_ID, NEW_PREFECTURE_ID, CUSTOMER_NAME, TEL, EMAIL, OLD_ADDRESS, NEW_ADDRESS)"
+                + " VALUES(:oldPrefectureId, :newPrefectureId, :customerName, :tel, :email, :oldAddress, :newAddress)";
         KeyHolder keyHolder = new GeneratedKeyHolder();
         int resultNum = parameterJdbcTemplate.update(sql, new BeanPropertySqlParameterSource(customer), keyHolder);
         customer.setCustomerId(keyHolder.getKey().intValue());
@@ -110,12 +110,12 @@ public class EstimateDao {
     }
 
     // 引越し予定月を取り出す。
-    public Integer getMovingMonth(int customerId) {
-        String sql = "SELECT CUSTOMER FROM MOVIN_MONTH WHERE CUSTOMER_ID = :customerId";
+    // public Integer getMovingMonth(int customerId) {
+    //     String sql = "SELECT CUSTOMER FROM MOVIN_MONTH WHERE CUSTOMER_ID = :customerId";
 
-        SqlParameterSource paramSource = new MapSqlParameterSource("customerId", customerId);
-        return parameterJdbcTemplate.queryForObject(sql, paramSource, Integer.class);
-    }
+    //     SqlParameterSource paramSource = new MapSqlParameterSource("customerId", customerId);
+    //     return parameterJdbcTemplate.queryForObject(sql, paramSource, Integer.class);
+    // }
 
     /**
      * 荷物ごとの段ボール数を取得する。

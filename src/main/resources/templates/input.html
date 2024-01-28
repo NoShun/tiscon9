@@ -41,18 +41,18 @@
 
         <!-- 引越し予定月の追加 -->
         <div class="form-group">
-          <label for="movingMonth">引越し予定月</label>
+          <label for="movingMonth">引越し予定月(繁忙期は簡易見積より高くなります)</label>
           <select id="movingMonth" name="movingMonth" th:field="*{movingMonth}" class="form-control" required>
               <option value="">-</option>
               <option value="1">1 月</option>
               <option value="2">2 月</option>
-              <option value="3">3 月</option>
-              <option value="4">4 月</option>
+              <option value="3">3 月(繁忙期)</option>
+              <option value="4">4 月(繁忙期)</option>
               <option value="5">5 月</option>
               <option value="6">6 月</option>
               <option value="7">7 月</option>
               <option value="8">8 月</option>
-              <option value="9">9 月</option>
+              <option value="9">9 月(繁忙期)</option>
               <option value="10">10 月</option>
               <option value="11">11 月</option>
               <option value="12">12 月</option>
