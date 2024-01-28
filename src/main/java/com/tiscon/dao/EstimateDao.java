@@ -129,6 +129,19 @@ public class EstimateDao {
         SqlParameterSource paramSource = new MapSqlParameterSource("packageId", packageId);
         return parameterJdbcTemplate.queryForObject(sql, paramSource, Integer.class);
     }
+    
+    /**
+     * トラックごとの最大搭載段ボール数を取得する。
+     *
+     * @param truckId トラックID
+     * @return 段ボール数
+     */
+    public int getBoxPerTruck(int truckId) {
+        String sql = "SELECT MAX_BOX FROM TRUCK_CAPACITY WHERE TRUCK_ID = :truckId";
+
+        SqlParameterSource paramSource = new MapSqlParameterSource("truckId", truckId);
+        return parameterJdbcTemplate.queryForObject(sql, paramSource, Integer.class);
+    }
 
     /**
      * 段ボール数に応じたトラック料金を取得する。
