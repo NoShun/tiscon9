@@ -16,6 +16,8 @@ public class Customer implements Serializable {
 
     private String email;
 
+    private String movingmonth;
+
     private String oldAddress;
 
     private String newAddress;
@@ -62,6 +64,14 @@ public class Customer implements Serializable {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getMovingMonth() {
+        return movingmonth;
+    }
+
+    public void setMovingMonth(String movingmonth) {
+        this.movingmonth = movingmonth;
     }
 
     public void setEmail(String email) {

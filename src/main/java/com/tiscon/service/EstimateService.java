@@ -89,10 +89,29 @@ public class EstimateService {
         int priceForOptionalService = 0;
 
         if (dto.getWashingMachineInstallation()) {
-            priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode());
+            priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode()) * dto.getWashingMachine();
         }
 
+        // Customer customer = new Customer();
+        // BeanUtils.copyProperties(dto, customer);
+        // estimateDAO.insertCustomer(customer);
+
+        // Integer customerId = customer.getCustomerId();
+        // Integer i = estimateDAO.getMovingMonth(customerId);
+
+        // double n ;
+
+        // if (i == 3 || i == 4) {
+        //     n = 1.5;
+        // } else if (i == 9) {
+        //     n = 1.2;
+        // } else {
+        //     n = 1.0;
+        // }
+
+        // int final_price = (int) ((priceForDistance + pricePerTruck) * n + priceForOptionalService);
         return priceForDistance + pricePerTruck + priceForOptionalService;
+        // return final_price;
     }
 
     /**

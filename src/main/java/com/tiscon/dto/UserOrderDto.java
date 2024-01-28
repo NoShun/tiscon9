@@ -8,6 +8,8 @@ public class UserOrderDto {
 
     private String email;
 
+    private String movingmonth;
+
     private String oldPrefectureId;
 
     private String oldAddress;
@@ -48,6 +50,14 @@ public class UserOrderDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMovingMonth() {
+        return movingmonth;
+    }
+
+    public void setMovingMonth(String movingmonth) {
+        this.movingmonth = movingmonth;
     }
 
     public String getOldPrefectureId() {

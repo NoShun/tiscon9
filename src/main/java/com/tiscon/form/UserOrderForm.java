@@ -25,6 +25,9 @@ public class UserOrderForm {
     private String email;
 
     @NotBlank
+    private String movingmonth;
+
+    @NotBlank
     private String oldPrefectureId;
 
     @NotBlank
@@ -77,6 +80,14 @@ public class UserOrderForm {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMovingMonth() {
+        return movingmonth;
+    }
+
+    public void setMovingMonth(String movingmonth) {
+        this.movingmonth = movingmonth;
     }
 
     public String getOldPrefectureId() {

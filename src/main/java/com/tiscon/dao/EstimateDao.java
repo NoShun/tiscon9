@@ -109,6 +109,14 @@ public class EstimateDao {
         return distance;
     }
 
+    // 引越し予定月を取り出す。
+    // public Integer getMovingMonth(int customerId) {
+    //     String sql = "SELECT CUSTOMER FROM MOVIN_MONTH WHERE CUSTOMER_ID = :customerId";
+
+    //     SqlParameterSource paramSource = new MapSqlParameterSource("customerId", customerId);
+    //     return parameterJdbcTemplate.queryForObject(sql, paramSource, Integer.class);
+    // }
+
     /**
      * 荷物ごとの段ボール数を取得する。
      *
