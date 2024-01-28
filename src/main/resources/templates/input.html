@@ -86,24 +86,24 @@
       <fieldset>
       <div class="sub-title">お荷物情報</div>
         <div class="form-group">
-          <label for="box">段ボールの個数</label>
+          <label for="box">段ボール(500mm×650mm×500mm)の個数</label>
           <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
         </div>
         <div class="form-group">
-          <label for="bed">ベッドの個数</label>
+          <label for="bed">ベッド・棚の個数</label>
           <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3"/>
         </div>
         <div class="form-group">
-          <label for="bicycle">自転車の個数</label>
+          <label for="bicycle">自転車・テレビの個数</label>
           <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1"/>
         </div>
         <div class="form-group">
-          <label for="washingMachine">洗濯機の個数</label>
+          <label for="washingMachine">洗濯機・エアコンの個数</label>
           <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
                  value="1"/>
         </div>
         <div class="form-group">
-          <label for="washingMachineInstallation">洗濯機の設置工事申し込み</label>
+          <label for="washingMachineInstallation">洗濯機・エアコンの設置工事申し込み</label>
           <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
             <option th:value="false" th:text="なし">なし</option>
             <option th:value="true" th:text="あり">あり</option>
