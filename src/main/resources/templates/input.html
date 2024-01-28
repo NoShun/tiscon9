@@ -38,6 +38,27 @@
           <label for="email">連絡先メールアドレス</label>
           <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
         </div>
+
+        <!-- 引越し予定月の追加 -->
+        <div class="form-group">
+          <label for="movingMonth">引越し予定月</label>
+          <select id="movingMonth" name="movingMonth" th:field="*{movingMonth}" class="form-control" required>
+              <option value="">-</option>
+              <option value="1">1 月</option>
+              <option value="2">2 月</option>
+              <option value="3">3 月</option>
+              <option value="4">4 月</option>
+              <option value="5">5 月</option>
+              <option value="6">6 月</option>
+              <option value="7">7 月</option>
+              <option value="8">8 月</option>
+              <option value="9">9 月</option>
+              <option value="10">10 月</option>
+              <option value="11">11 月</option>
+              <option value="12">12 月</option>
+          </select>
+        </div>
+        
         <div class="sub-title">集荷元・お届け先</div>
         <div class="form-group">
           <label for="oldPrefectureId">集荷元住所（都道府県）</label>
