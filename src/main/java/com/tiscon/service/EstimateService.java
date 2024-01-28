@@ -89,7 +89,7 @@ public class EstimateService {
         int priceForOptionalService = 0;
 
         if (dto.getWashingMachineInstallation()) {
-            priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode());
+            priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode()) * dto.getWashingMachine();
         }
 
         // Customer customer = new Customer();
